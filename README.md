@@ -15,7 +15,7 @@ Add configuration details into your fractal.js file:
 ```js
 const fractal = require('@frctl/fractal');
 
-fractal.engine('twig', '@frctl/twig-adapter'); // register the twig engine adapter
-fractal.set('components.ext', '.twig'); // look for files with a .twig file extension
-
+fractal.engine('twig', '@frctl/twig-adapter'); // register the Twig engine adapter
+fractal.set('components.ext', '.twig'); // use Twig for component views
+fractal.set('components.engine', 'twig'); // look for files with a .twig file extension
 ```

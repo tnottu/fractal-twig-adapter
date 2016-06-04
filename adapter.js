@@ -12,7 +12,7 @@ module.exports = function(source, config){
 
 	/**
 	 * Register a custom loader for `@component` reference handles
-	 * More information: https://github.com/twigjs/twig.js/pull/301
+	 * Reference: https://github.com/twigjs/twig.js/pull/301
 	 */
 	Twig.extend(function(Twig) {
 		Twig.Templates.registerLoader('fractal', function(name, params) {
