@@ -14,7 +14,6 @@
   },
   "homepage": "https://github.com/tnottu/fractal-twig-adapter",
   "dependencies": {
-    "lodash": "^4.0.0",
     "twig": "^0.9.5"
   },
   "devDependencies": {}
