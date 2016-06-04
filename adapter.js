@@ -8,7 +8,7 @@ module.exports = function(source, config){
 	let instance = Twig.twig;
 	let viewCache = null;
 
-	Twig.cache = false;
+	Twig.cache(false);
 
 	/**
 	 * Register a custom loader for `@component` reference handles
