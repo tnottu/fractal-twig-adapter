@@ -11,7 +11,7 @@ module.exports = function(source, config){
 	Twig.cache(false);
 
 	/**
-	 * Register a custom loader for `@component` reference handles
+	 * Register a custom loader for `#component` reference handles
 	 * Reference: https://github.com/twigjs/twig.js/pull/301
 	 */
 	Twig.extend(function(Twig) {
@@ -27,7 +27,7 @@ module.exports = function(source, config){
 	function loadViews() {
 		viewCache = {};
 		for (let view of source.flattenDeep()) {
-			viewCache[`@${view.alias}`] = view.content;
+			viewCache[`#${view.alias}`] = view.content;
 		}
 	}
 
@@ -45,7 +45,7 @@ module.exports = function(source, config){
 
 			let template = instance({
 				method: 'fractal',
-				name: `@${Path.parse(path).name}`,
+				name: `#${Path.parse(path).name}`,
 				allowInlineIncludes: true,
 				async: false
 			});
