@@ -16,6 +16,9 @@ module.exports = function(source, config){
 	 */
 	Twig.extend(function(Twig) {
 		Twig.Templates.registerLoader('fractal', function(name, params) {
+			if (params.id.indexOf('#') !== 0) {
+				params.id = `#${Path.parse(params.id).name}`;
+			}
 			params.data = viewCache[params.id];
 			return new Twig.Template(params);
 		});
