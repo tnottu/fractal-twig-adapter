@@ -19,3 +19,9 @@ fractal.engine('twig', '@frctl/twig-adapter'); // register the Twig engine adapt
 fractal.set('components.ext', '.twig'); // use Twig for component views
 fractal.set('components.engine', 'twig'); // look for files with a .twig file extension
 ```
+
+The handle syntax uses `#` character instead of `@` in order to keep compatibility with the PHP version of Twig which uses `@` for namespaces.
+
+```
+{% include '#my-component' %}
+```
