@@ -1,20 +1,22 @@
 {
-  "name": "@frctl/twig-adapter",
-  "version": "0.1.0",
-  "description": "Use Twig templates with Fractal.",
-  "main": "adapter.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tnottu/fractal-twig-adapter.git"
-  },
-  "author": "Tomi <tnottu@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tnottu/fractal-twig-adapter/issues"
-  },
-  "homepage": "https://github.com/tnottu/fractal-twig-adapter",
-  "dependencies": {
-    "twig": "^0.9.5"
-  },
-  "devDependencies": {}
+	"description": "Twig template adapter for Fractal.",
+	"name": "@frctl/twig",
+	"main": "index.js",
+	"readme": "ERROR: No README data found!",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tnottu/fractal-twig-adapter.git"
+	},
+	"author": "Tomi <tnottu@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/tnottu/fractal-twig-adapter/issues"
+	},
+	"homepage": "https://github.com/tnottu/fractal-twig-adapter",
+	"dependencies": {
+		"twig": "^0.9.5",
+		"@frctl/fractal": "^1.0.0-rc.1",
+		"lodash": "^4.0.0"
+	},
+	"version": "0.2.0"
 }
