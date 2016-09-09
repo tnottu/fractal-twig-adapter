@@ -1,6 +1,6 @@
 # Twig Adapter
 
-Use Twig templates with [Fractal](http://frctl.github.io).
+Use Twig templates with [Fractal](http://fractal.build/).
 
 ## Usage
 
