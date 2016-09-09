@@ -24,7 +24,8 @@ class TwigAdapter extends Adapter {
 		Twig.extend((TwigExtend) => {
 			TwigExtend.Templates.registerLoader('fractal', (name, params) => {
 				if (params.id.indexOf('@') !== 0) {
-					params.id = `@${Path.parse(params.id).name.replace(/^_/, '')}`;
+					params.id = `@${Path.parse(params.id).name.replace(/^_/, '').replace(/^\d\d\-/, '')}`;
+					console.log(params.id);
 				}
 				params.data = this._partials[params.id];
 				return new TwigExtend.Template(params);
@@ -48,10 +49,10 @@ class TwigAdapter extends Adapter {
 		});
 
 		return new Promise((resolve) => {
-			const handle = `@${Path.parse(tplPath).name.replace(/^_/, '')}`;
+			const handle = `@${Path.parse(tplPath).name.replace(/^_/, '').replace(/^\d\d\-/, '')}`;
 			const template = Twig.twig({
 				method: this._partials[handle] ? 'fractal' : undefined,
-				name: this._partials[handle] ? `@${Path.parse(tplPath).name.replace(/^_/, '')}` : undefined,
+				name: this._partials[handle] ? `@${Path.parse(tplPath).name.replace(/^_/, '').replace(/^\d\d\-/, '')}` : undefined,
 				path: this._partials[handle] ? undefined : tplPath,
 				allowInlineIncludes: true,
 				async: false
